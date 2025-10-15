@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean id="addr" class="com.model.Address">
+  	<constructor-arg name="pincode" value="54321"></constructor-arg>
+  	<constructor-arg name="area" value="kondhwa"></constructor-arg>
+  	<constructor-arg name="city" value="pune"></constructor-arg>
+  </bean>
+  
+  <bean id="p" class="com.model.Person">
+  	<constructor-arg name="pid" value="101"></constructor-arg>
+  	<constructor-arg name="pname" value="umang"></constructor-arg>
+  	<constructor-arg name="adr" ref="addr"></constructor-arg>
+  	<constructor-arg name="email">
+  		<list>
+  			<value>umang1@gmail.com</value>
+  			<value>rushab@gmail.com</value>
+  			<value>ansh@gmail.com</value>
+  		</list>
+  	</constructor-arg>
+  	<constructor-arg name="contact">
+  		<set>
+  			<value>8010507301</value>
+  			<value>123456789</value>
+  		</set>
+  	</constructor-arg>
+  	<constructor-arg name="marks">
+  		<map>
+  			<entry key="Java" value="88.90"></entry>
+  			<entry key="HTML" value="78.71"></entry>
+  		</map>
+  	</constructor-arg>
+  </bean> 
+  
+  </beans>

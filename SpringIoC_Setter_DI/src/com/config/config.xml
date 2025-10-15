@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+  <bean id="addr" class="com.model.Address">
+  	<property name="pincode" value="411048"></property>
+  	<property name="city" value="kondhwa"></property>
+  	<property name="area" value="pune"></property>
+  </bean>
+  
+  <bean id="p" class="com.model.Person">
+  	<property name="pid" value="1011"></property>
+  	<property name="pname" value="umang"></property>
+  	<property name="adr" ref="addr"></property>
+  	<property name="email">
+  		<list>
+  			<value>umang@gmail.com</value>
+  			<value>harsh@gmail.com</value>
+  			<value>vaibhav@gmail.com</value>
+  		</list>
+  	</property>
+  	<property name="contact">
+  		<set>
+  			<value>123456789</value>
+  			<value>801834382</value>
+  		</set>
+  	</property>
+  	<property name="marks">
+  		<map>
+  			<entry key="HTML" value="98"></entry>
+  			<entry key="Java" value="88"></entry>
+  		</map>
+  	</property>
+  </bean>
+  </beans>
